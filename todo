@@ -1,0 +1,15 @@
+overview todo/pseudocode:
+- you get user input via prompt
+- user input should be case insensitive
+- there should be a function that randomly selects rock, paper, scissors for the computer.
+- this computerPlay function will return its result as computerSelection
+- there will be a function that plays a single round of RPS playRound(), which will take 2 parameters
+- the 2 params are: playerSelection and computerSelection
+- at the end it will return a string like so: "You Lose! Paper beats Rock"
+- write another function, that will play 5 rounds, 
+- keeps score and reports the overall winner at the end
+
+
+
+
+
