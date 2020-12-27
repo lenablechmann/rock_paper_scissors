@@ -1,8 +1,6 @@
 function user_play() {
-  // get user input via prompt function user_play, turn it to lower case (not case sensitive)
-  let user_text = prompt(
-    "Enter either 'rock' 'paper' or 'scissors'"
-  ).toLowerCase();
+  // get user input via prompt function user_play, not case sensitive
+  let user_text = prompt("Enter either 'rock' 'paper' or 'scissors'").toLowerCase();
 
   // Parse user input into 1(rock), 2(paper), 3 (scissors)
   if (user_text.localeCompare("rock") === 0) {
@@ -17,17 +15,14 @@ function user_play() {
 }
 
 function computer_play() {
-  // function that randomly selects rock, paper, scissors for the computer.
-  // will return its result as an int (from 1 to 3)
+  // function that randomly selects rock-1, paper-2, scissors-3 for the computer.
   return Math.floor(Math.random() * 3) + 1;
 }
 
 function play_round(player_selection, computer_selection) {
+
   // rock(1) always beats scissors (3), paper(2) beats rock(1), scissors(3) beat paper (2)
-  // it shall console log a string like "You Lose! Paper beats Rock."
-  // and return 1 if user wins, 2 if computer wins, 0 if a draw
   if (player_selection === computer_selection) {
-    // That's a draw
     console.log("It's a draw.");
     return 0;
   } else if (player_selection > computer_selection) {
@@ -47,8 +42,7 @@ function play_RPS() {
   // variables for scores:
   let user_score = 0, computer_score = 0, who_won;
 
-  // write another function, that will play 5 rounds,
-  // keeps score and reports the overall score at the end
+  // play 5 rounds, keep score and report the overall score at the end
   for (let count = 0; count < 5; count++) {
     user_selection = user_play();
     console.log("User Int is " + user_selection);
