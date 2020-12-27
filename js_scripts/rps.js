@@ -1,11 +1,14 @@
 function user_play(){
-    // get user input via prompt function user_play
-    let user_text = prompt("Enter either 'rock' 'paper' or 'scissors'");
+    // get user input via prompt function user_play, turn it to lower case (not case sensitive)
+    let user_text = prompt("Enter either 'rock' 'paper' or 'scissors'").toLowerCase();
 
-    console.log(`User chose ${user_text}.`);
-
-    // Parse user input into 0(rock), 1(paper), 2 (scissors), case not sensitive
+    // Parse user input into 0(rock), 1(paper), 2 (scissors)
     // return that number
+    (user_text.localeCompare("rock") === 0) ? console.log("user chose rock") :
+    (user_text.localeCompare("paper") === 0) ? console.log("user chose paper") :
+    (user_text.localeCompare("scissors") === 0) ? console.log("user chose scissors") : console.log("user chose unknown.");
+
+
 }
 
 // write a function computer_play
