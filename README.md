@@ -12,7 +12,10 @@ At first it's going to be console.log only, then the interface will be added.
 ## To Do / Project Plan:
 - [x] Basic JS algorithm with console logs
 - [x] Sketch up a minimalistic layout
-- [ ] Make a mock-up layout + grid in Figma (learn Figma)
-- [ ] Learn and apply CSS grid
-- [ ] Make it responsive
+- [x] Make a mock-up layout + grid in Figma (learn Figma) ![finished layout](images/layout_in_figma.png)
+  And here is the step by step layout process from handdrawn sketch to figma:
+  ![Step by Step layout progress](images/layout_steps_wip.png)
+- [ ] structure the HTML
+- [ ] Learn and apply CSS grid to the existing html structure
+- [ ] Make it responsive (mobile first, media queries)
 - [ ] Select nodes with JS and make the webpage dynamic
