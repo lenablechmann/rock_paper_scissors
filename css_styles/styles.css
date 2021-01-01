@@ -2,3 +2,32 @@
 * {
     box-sizing: border-box;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+header {
+    background-color: aquamarine;
+}
+
+div.score {
+    background-color: bisque;
+}
+
+section.weapons {
+    background-color: aquamarine;
+}
+
+div.player-selection {
+    background-color: bisque;
+}
+
+div.result {
+    background-color: aquamarine;
+}
+
+div.computer-selection {
+    background-color: bisque;
+}
