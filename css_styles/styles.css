@@ -3,6 +3,9 @@
     box-sizing: border-box;
 }
 
+body {
+    font-size: 100%;
+}
 .grid {
     /* Mobile first. */
     display: grid;
@@ -20,11 +23,15 @@
 header {
     grid-area: header;
     background-color: rgb(239, 247, 245);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3.5em;
 }
 
 div.score {
     grid-area: score;
     background-color: rgb(246, 190, 121);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3.5em;
 }
 
 section.weapons {
@@ -32,17 +39,19 @@ section.weapons {
     background-color: rgb(127, 136, 255);
 }
 
-div.player-selection {
+#player-selection {
     grid-area: player;
     background-color: rgb(124, 189, 153);
 }
 
-div.result {
+#result {
     grid-area: result;
     background-color: rgb(206, 160, 179);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5em;
 }
 
-div.computer-selection {
+#computer-selection {
     grid-area: computer;
     background-color: bisque;
 }
