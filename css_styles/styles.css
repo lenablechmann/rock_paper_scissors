@@ -5,29 +5,43 @@
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header"
+                         "score score score"
+                         "weapons weapons weapons"
+                         "player player player"
+                         "result result result"
+                         "computer computer computer";
+    grid-template-columns: 35% 30% 35%;
+    grid-template-rows: 12% 12% 12% 25% 14% 25%;
+    width: 100vw;
+    height: 100vh;
 }
 header {
+    grid-area: header;
     background-color: aquamarine;
 }
 
 div.score {
+    grid-area: score;
     background-color: bisque;
 }
 
 section.weapons {
+    grid-area: weapons;
     background-color: aquamarine;
 }
 
 div.player-selection {
+    grid-area: player;
     background-color: bisque;
 }
 
 div.result {
+    grid-area: result;
     background-color: aquamarine;
 }
 
 div.computer-selection {
+    grid-area: computer;
     background-color: bisque;
 }
