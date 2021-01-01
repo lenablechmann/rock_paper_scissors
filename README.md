@@ -9,7 +9,7 @@ At first it's going to be console.log only, then the interface will be added.
 - planning JS + HTML + CSS web apps
 - basic Figma layouting skills
 
-## To Do / Project Plan:
+## Project Plan / Steps:
 - [x] Basic JS algorithm with console logs
 - [x] Sketch up a minimalistic layout
 - [x] Make a mock-up layout + grid in Figma (learn Figma) ![finished layout](images/layout_in_figma.png)
@@ -18,4 +18,10 @@ At first it's going to be console.log only, then the interface will be added.
 - [ ] structure the HTML
 - [ ] Learn and apply CSS grid to the existing html structure
 - [ ] Make it responsive (mobile first, media queries)
-- [ ] Select nodes with JS and make the webpage dynamic
+- [ ] Refactor JS so that it responds to events
+  1. Remove the logic that plays five rounds
+  2. three event listener buttons, that will call playRound fu with the necessary PlayerSelection (1 - Rock; 2 - Paper; 3 - scissors)
+  1. display the results in the appropriate div
+  2. change all console logs into DOM manipulations
+- [ ] Add subtle animations (like subtle button changes upon click)
+
