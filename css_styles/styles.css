@@ -1,0 +1,4 @@
+/* Include padding and border in total width */
+* {
+    box-sizing: border-box;
+}
