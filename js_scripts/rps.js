@@ -1,3 +1,17 @@
+const btn = document.querySelectorAll('button');
+btn.forEach((button) => {
+  button.addEventListener('click', () => {
+    userSelection = parseInt(button.id);
+    // should call a function that will replace the image according to player selection
+    console.log(userSelection);
+    computerSelection = parseInt(computer_play());
+    // should call a function that will replace the image according to computer selection
+    console.log(computerSelection);
+    result = play_round(userSelection, computerSelection);
+    // refactor play round + let it call a more generic function like play 5 rounds
+  });
+});
+
 function user_play() {
   // get user input via prompt function user_play, not case sensitive
   let user_text = prompt("Enter either 'rock' 'paper' or 'scissors'").toLowerCase();
@@ -36,6 +50,7 @@ function play_round(player_selection, computer_selection) {
     return 2;
   }
 }
+/*
 function play_RPS() {
   // variables for function calls:
   let user_selection, computer_selection;
@@ -65,3 +80,4 @@ function play_RPS() {
     `The final score is: You ${user_score} :: ${computer_score} Computer.`
   );
 }
+*/
