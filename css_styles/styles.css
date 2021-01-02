@@ -66,9 +66,7 @@ section.weapons {
 .player-turn {
     grid-area: player;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    background-color: rgb(124, 189, 153);
+    background-color: rgb(129, 214, 49);
 }
 
 .player-turn > img {
@@ -117,10 +115,11 @@ section.weapons {
     section.weapons {
         grid-area: weapons;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: flex-start;
         background-color: rgb(127, 136, 255);
         padding-left: 1em;
+        padding-right: 1em;
         padding-top: 1em;
     }
     .btn img {
@@ -134,5 +133,29 @@ section.weapons {
         border-radius: 15%;
         background-color: white;
         border: 0.1em solid #55555D;
+    }
+
+    .player-turn {
+        grid-area: player;
+        display: flex;
+        justify-content: flex-end;
+        background-color: rgb(129, 214, 49);
+    }
+    .player-turn > img {
+        object-fit: scale-down;
+        width: inherit;
+        max-height: 100%;
+    }
+
+    .computer-turn {
+        grid-area: computer;
+        display: flex;
+        justify-content: flex-start;
+        background-color: rgb(214, 49, 214);
+    }
+    .computer-turn > img {
+        object-fit: scale-down;
+        width: inherit;
+        max-height: 100%;
     }
 }
