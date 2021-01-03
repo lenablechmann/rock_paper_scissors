@@ -18,7 +18,7 @@ At first it's going to be console.log only, then the interface will be added.
 - [x] structure the HTML
 - [x] Learn and apply CSS grid to the existing html structure
 - [x] Make it responsive (mobile first, media queries)
-- [ ] Refactor JS so that it responds to events
+- [x] Refactor JS so that it responds to events
   1. Remove the logic that plays five rounds
   2. three event listener buttons, that will call playRound fu with the necessary PlayerSelection (1 - Rock; 2 - Paper; 3 - scissors)
   1. display the results in the appropriate div
