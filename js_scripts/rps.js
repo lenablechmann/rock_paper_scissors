@@ -1,18 +1,20 @@
-
+const btn = document.querySelectorAll('button');
+// this variables need a higher scope, otherwise they'll reset
 let userScore = 0, computerScore = 0, result; 
 
-const btn = document.querySelectorAll('button');
-
 btn.forEach((button) => {
+
+  // listening to the 3 "weapon buttons"
   button.addEventListener('click', () => {
+      // button ids correspond to how rock(1), paper(2), scissors(3) are viewed in this code
       let userSelection = parseInt(button.id);
       showPlayerSelection(userSelection);
 
       let computerSelection = parseInt(computerPlay());
       showComputerSelection(computerSelection);
 
+      // updates the score + displays current round result
       result = playRound(userSelection, computerSelection);
-
       displayRoundResult(result);
         switch (result) {
           case 1:
@@ -36,6 +38,7 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
   // rock(1) always beats scissors (3), paper(2) beats rock(1), scissors(3) beat paper (2)
+
   if (playerSelection === computerSelection) {
     console.log("It's a draw.");
     return 0;
@@ -52,7 +55,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function showPlayerSelection(userSelection) {
-  // changes the user image choice
+// changes the user image choice
 switch (userSelection) {
   case 1:
     document.getElementById('player-choice').src='/images/rock.png'
@@ -69,7 +72,7 @@ switch (userSelection) {
 }
 
 function showComputerSelection(computerSelection) {
-  // changes the computer image choice
+// changes the computer image choice
 switch (computerSelection) {
   case 1:
     document.getElementById('computer-choice').src='/images/rockR.png'
@@ -86,6 +89,7 @@ switch (computerSelection) {
 }
 
 function displayRoundResult(result){
+  // chose query selector over innerTextHTML to build a good security habit
   heading = document.querySelector("#result > h2")
   switch (result) {
     case 0:
@@ -102,5 +106,6 @@ function displayRoundResult(result){
 
 function displayScores(userScore, computerScore) {
   score = document.querySelector(".score > h2")
+  // using parametrized string to dynamically display the score
   score.textContent = `${userScore} : ${computerScore}`;
 }
