@@ -1,18 +1,31 @@
+
+let userScore = 0, computerScore = 0, result; 
+
 const btn = document.querySelectorAll('button');
 
 btn.forEach((button) => {
   button.addEventListener('click', () => {
-    userSelection = parseInt(button.id);
-    // should call a function that will replace the image according to player selection
-    showPlayerSelection(userSelection);
-    console.log("Player chose: " + userSelection);
-    computerSelection = parseInt(computerPlay());
-    showComputerSelection(computerSelection);
-    // should call a function that will replace the image according to computer selection
-    // showComputerSelection(computerSelection)
-    console.log("Computer chose: " + computerSelection);
-    // should call a play many rounds function playSeveralRounds(userSelection, computerSelection)
-    result = playRound(userSelection, computerSelection);
+      let userSelection = parseInt(button.id);
+      showPlayerSelection(userSelection);
+
+      let computerSelection = parseInt(computerPlay());
+      showComputerSelection(computerSelection);
+
+      result = playRound(userSelection, computerSelection);
+
+      displayRoundResult(result);
+        switch (result) {
+          case 1:
+            userScore++;
+            break;
+          case 2:
+            computerScore++;
+            break;
+          default:
+            break;
+        }
+        // call function that changes score to the current
+      displayScores(userScore, computerScore);
   });
 });
 
@@ -70,4 +83,24 @@ switch (computerSelection) {
   default:
     break
   }
+}
+
+function displayRoundResult(result){
+  heading = document.querySelector("#result > h2")
+  switch (result) {
+    case 0:
+      heading.textContent = "It's a draw."
+      break;
+    case 1:
+      heading.textContent = "You win."
+      break;
+    case 2:
+      heading.textContent = "You lose."
+      break;
+  }
+}
+
+function displayScores(userScore, computerScore) {
+  score = document.querySelector(".score > h2")
+  score.textContent = `${userScore} : ${computerScore}`;
 }
