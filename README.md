@@ -2,6 +2,8 @@
 The classic game, but written in Javascript, CSS and HTML. 
 At first it's going to be console.log only, then the interface will be added.
 
+[Here is the deployed version of the game](https://lenablechmann.github.io/rock_paper_scissors/ "rock paper scissors").
+
 ## Learning Goals:
 - how to develop simple algos with JS + how to use dev tools for debugging
 - DOM manipulation with Javascript
